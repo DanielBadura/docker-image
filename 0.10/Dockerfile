@@ -31,6 +31,7 @@ RUN apk --update --progress --no-cache --repository http://dl-cdn.alpinelinux.or
     php7-xmlreader \
     php7-xmlwriter \
     php7-zlib \
+    php7-soap \
     && curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && curl -o /tmp/composer-setup.sig https://composer.github.io/installer.sig \
     && php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) !== trim(file_get_contents('/tmp/composer-setup.sig'))) { echo 'Invalid installer' . PHP_EOL; exit(1); }" \
